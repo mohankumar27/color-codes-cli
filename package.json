@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Cli tool that provides all color code formats",
   "main": "index.js",
-  "preferGlobal": true,
   "bin": {
     "color-codes": "./index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "scripts": {},
+  "keywords": [
+    "javascript",
+    "npm",
+    "color-codes"
+  ],
   "author": "Mohan Kumar Sagadevan",
   "license": "MIT",
   "dependencies": {
@@ -18,5 +19,13 @@
     "chalk": "4.1.2",
     "commander": "^8.3.0",
     "log-update": "4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohankumar27/color-codes-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohankumar27/color-codes-cli/issues"
+  },
+  "homepage": "https://github.com/mohankumar27/color-codes-cli#readme"
 }
