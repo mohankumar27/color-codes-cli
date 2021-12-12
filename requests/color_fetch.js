@@ -1,5 +1,4 @@
 const colorAPI = require("./utils/api");
-const log = console.log;
 
 const SUCCESS = 200;
 const color_codes = [];
@@ -10,8 +9,25 @@ const parseResponse = (key, response) => {
   const hsl = response.hsl.value || "nil";
   const hsv = response.hsv.value || "nil";
   const cmyk = response.cmyk.value || "nil";
+  const name = response.name.value || "nil";
 
-  color_codes.push({ [`${key}Response`]: { hex, rgb, hsl, hsv, cmyk } });
+  if (!response.name.exact_match_name) {
+    color_codes.push({
+      [`${key}Response`]: {
+        hex,
+        rgb,
+        hsl,
+        hsv,
+        cmyk,
+        name,
+        closest_named_hex: response.name.closest_named_hex,
+      },
+    });
+  } else {
+    color_codes.push({
+      [`${key}Response`]: { hex, rgb, hsl, hsv, cmyk, name },
+    });
+  }
 };
 
 const getCodes = async (params) => {
@@ -34,10 +50,9 @@ const fetchColorCodes = async ({ hex, rgb }) => {
   if (hex) {
     await getCodes({ hex });
   }
-  if (rgb) {
+  if (rgb.length !== 0) {
     await getCodes({ rgb: rgb.join(",") });
   }
-  // log(color_codes);
   return color_codes;
 };
 
