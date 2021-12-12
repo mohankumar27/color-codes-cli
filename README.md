@@ -35,6 +35,10 @@ hexResponse {
 | --hex | -             | six digit hex code value           | --hex 14E71D    |
 | --rgb | []            | rgb color code spearated by spaces | --rgb 20 231 29 |
 
+## API
+
+[ColorApi.com](https://www.thecolorapi.com/)
+
 ## Authors
 
 **Mohan Kumar Sagadevan** - [GitHub](https://github.com/mohankumar27)
