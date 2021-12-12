@@ -37,7 +37,7 @@ hexResponse {
 
 ## API
 
-[ColorApi.com](https://www.thecolorapi.com/)
+[The Color API](https://www.thecolorapi.com/)
 
 ## Authors
 
